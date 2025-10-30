@@ -444,6 +444,24 @@ int cmd_duty() {
   return 0;
 }
 
+/* Command : I2CR
+ *
+ * Note:
+ *   - TBD
+ */
+int cmd_i2cr() {
+  return 0; // To be implemented
+}
+
+/* Command : I2CW
+ *
+ * Note:
+ *   - TBD
+ */
+int cmd_i2cw() {
+  return 0; // To be implemented
+}
+
 /* Command : LIST
  *
  * Note:
