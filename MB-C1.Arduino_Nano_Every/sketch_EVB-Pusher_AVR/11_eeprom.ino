@@ -135,6 +135,10 @@ int load_from_eeprom(bool with_debug_flag)
   struct eeprom_save_header saved_header;
   struct eeprom_save* ep = nullptr; // for offset calc
   
+  if (IS_INIT_DEBUG_ENABLED) {
+    Serial.println(F("Load: pin_ctrl_tbl before loaded from EEPROM:"));
+    cmd_list();
+  }
   // Check header
   int eeAddr = 0;
   EEPROM.get(eeAddr, saved_header);
@@ -164,7 +168,7 @@ int load_from_eeprom(bool with_debug_flag)
       pin_ctrl_tbl[row].name[col] = EEPROM.read(eeAddr);;
       eeAddr += 1;
     }
-    pin_ctrl_tbl[row].name[FIXED_PIN_LABEL_STR_LEN + 1] = '\0'; // Force null termination
+    pin_ctrl_tbl[row].name[FIXED_PIN_LABEL_STR_LEN] = '\0'; // Force null termination
   }
 
   // Load calibrated variables
