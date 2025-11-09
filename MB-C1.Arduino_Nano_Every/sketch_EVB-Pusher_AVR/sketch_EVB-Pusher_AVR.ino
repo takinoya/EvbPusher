@@ -357,7 +357,7 @@ void proc_toggle() {
       else {
         hold_time = pin_ctrl_tbl[i].hold_interval;  // End of hold_interval
       }
-      if (0 == hold_time) break;  // 0 means infinite for ON or OFF command
+      if (0 == hold_time) continue;  // 0 means infinite for ON or OFF command
       if ( millis() - pin_ctrl_tbl[i].hold_start_time >= hold_time ) {
         switch (pin_ctrl_tbl[i].tunable.type) {
           case PIN_TYPE_SW:

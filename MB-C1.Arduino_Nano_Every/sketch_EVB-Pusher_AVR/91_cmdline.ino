@@ -1,11 +1,14 @@
 /*
  * Implementation for CLI
  */
+#define PUSHPULL_MODE_OFF   0
+#define PUSHPULL_MODE_PUSH  1
+#define PUSHPULL_MODE_PULL  3
 
 /******************************************************************************
  * Command line intermediate function
  *****************************************************************************/
-int _cmd_pushpull(int repeat, int duration, int interval, bool is_pull)
+int _cmd_pushpull(int repeat, int duration, int interval, int mode)
 {
   // Determine SW Port
   struct pin_ctrl_entry_t* pin_ctrl_ptr = search_pin_ctrl_entry_by_name(argv[1]);
@@ -16,7 +19,7 @@ int _cmd_pushpull(int repeat, int duration, int interval, bool is_pull)
   }
 
   // Do push action by pin type
-  if (is_pull) {  // PULL operation
+  if (PUSHPULL_MODE_PULL == mode) {  // PULL operation
     switch (pin_ctrl_ptr->tunable.type) {
       case PIN_TYPE_SW:
         CMD_DBG_PRINTLN(F("PULL:SW"));
@@ -40,17 +43,17 @@ int _cmd_pushpull(int repeat, int duration, int interval, bool is_pull)
         break;
       case PIN_TYPE_PWM:
         CMD_DBG_PRINTLN(F("PULL:PWM"));
-        do_pwm_on(pin_ctrl_ptr);
+        do_pwm_off(pin_ctrl_ptr);
         break;
       default:
         // Error
         CMD_DBG_PRINTLN(F("PULL:Unsupported"));
-        last_cmd_error_mesg = F("PUSH: Unsupported for this pin_type !?!?");
+        last_cmd_error_mesg = F("PULL: Unsupported for this pin_type !?!?");
         return -1;
         break;
     }
   }
-  else {  // PUSH operation
+  else if (PUSHPULL_MODE_PUSH == mode){  // PUSH operation
     switch (pin_ctrl_ptr->tunable.type) {
       case PIN_TYPE_SW:
         CMD_DBG_PRINTLN(F("PUSH:SW"));
@@ -80,6 +83,40 @@ int _cmd_pushpull(int repeat, int duration, int interval, bool is_pull)
         // Error
         CMD_DBG_PRINTLN(F("PUSH:Unsupported"));
         last_cmd_error_mesg = F("PUSH: Unsupported for this pin_type !?!?");
+        return -1;
+        break;
+    }
+  }
+  else {  // OFF operation
+    switch (pin_ctrl_ptr->tunable.type) {
+      case PIN_TYPE_SW:
+        CMD_DBG_PRINTLN(F("OFF:SW"));
+        do_sw_off(pin_ctrl_ptr);
+        if (0 > duration) {
+          duration = pin_ctrl_ptr->tunable.duration;
+        }
+        if (0 > interval) {
+          interval = pin_ctrl_ptr->tunable.duration;
+        }
+        break;
+      case PIN_TYPE_SRV:
+        CMD_DBG_PRINTLN(F("OFF:SERVO"));
+        do_servo_n(pin_ctrl_ptr);    // For SERVO, N is equivalent to OFF.
+        if (0 > duration) {
+          duration = pin_ctrl_ptr->tunable.duration;
+        }
+        if (0 > interval) {
+          interval = pin_ctrl_ptr->tunable.duration;
+        }
+        break;
+      case PIN_TYPE_PWM:
+        CMD_DBG_PRINTLN(F("OFF:PWM"));
+        do_pwm_off(pin_ctrl_ptr);
+        break;
+      default:
+        // Error
+        CMD_DBG_PRINTLN(F("OFF:Unsupported"));
+        last_cmd_error_mesg = F("OFF: Unsupported for this pin_type !?!?");
         return -1;
         break;
     }
@@ -261,7 +298,7 @@ int cmd_push() {
     arg_interval = argv[4].toInt();
   };
 
-  return _cmd_pushpull(arg_repeat, arg_duration, arg_interval, false);
+  return _cmd_pushpull(arg_repeat, arg_duration, arg_interval, PUSHPULL_MODE_PUSH);
 };
 
 /* Command : PUSH2X <pin_label> [duration]
@@ -286,7 +323,7 @@ int cmd_push2x() {
     arg_interval = argv[3].toInt();
   };
 
-  return _cmd_pushpull(2, arg_duration, arg_interval, false);
+  return _cmd_pushpull(2, arg_duration, arg_interval, PUSHPULL_MODE_PUSH);
 };
 
 /* Command : PUSH3X <pin_label> [duration]
@@ -311,7 +348,7 @@ int cmd_push3x() {
     arg_interval = argv[3].toInt();
   };
 
-  return _cmd_pushpull(3, arg_duration, arg_interval, false);
+  return _cmd_pushpull(3, arg_duration, arg_interval, PUSHPULL_MODE_PUSH);
 };
 
 /* Command : ON <pin_label> [duration]
@@ -333,7 +370,7 @@ int cmd_on() {
     // Has duration
     arg_duration = argv[2].toInt();
   };
-  return _cmd_pushpull(1, arg_duration, 0, false);  // Convert to infinite push once
+  return _cmd_pushpull(1, arg_duration, 0, PUSHPULL_MODE_PUSH);  // Convert to infinite push once
 }
 
 /* Command : OFF <pin_label> [duration]
@@ -355,7 +392,7 @@ int cmd_off() {
     // Has duration
     arg_duration = argv[2].toInt();
   };
-  return _cmd_pushpull(1, arg_duration, 0, true);  // Convert to infinite pull once
+  return _cmd_pushpull(1, arg_duration, 0, PUSHPULL_MODE_OFF);  // Convert to infinite pull once
 }
 
 /* Command : PULL <pin_label> [duration] [[repeat] [interval]]
@@ -387,16 +424,17 @@ int cmd_pull()
     arg_interval = argv[4].toInt();
   };
 
-  return _cmd_pushpull(arg_repeat, arg_duration, arg_interval, true);
+  return _cmd_pushpull(arg_repeat, arg_duration, arg_interval, PUSHPULL_MODE_PULL);
 }
 
+#if 0
 /* Command : N <pin_label>
  *
  * Note:
  *   - SERVO only
- *   - Move to nutral position
+ *   - Move and keep to N position
  */
-int cmd_n()
+int cmd_up()
 {
   if (argc < 2) {
     last_cmd_error_mesg = F("At least 1 arguments required !?!?");
@@ -413,6 +451,29 @@ int cmd_n()
 
   do_servo_n(pin_ctrl_ptr);
   return 0;
+}
+#endif //#if 0
+
+/* Command : UP <pin_label> [duration]
+ *
+ * Note:
+ *   Equivalent to PULL
+ *   - repeat   : Fixed 1
+ *   - duration : Default - Infinite
+ *   - interval : Do not care
+ */
+int cmd_up() {
+  int arg_duration = 0;  // Default : Infinite
+
+  if (argc < 2) {
+    last_cmd_error_mesg = F("At least 1 arguments required !?!?");
+    return -1;
+  }
+  if (3 <= argc) {
+    // Has duration
+    arg_duration = argv[2].toInt();
+  };
+  return _cmd_pushpull(1, arg_duration, 0, PUSHPULL_MODE_PULL);  // Convert to infinite pull once
 }
 
 /* Command : DUTY <pin_label> <duty>
@@ -981,9 +1042,9 @@ void do_parse_cmd() {
   else if (String(F("OFF")) == argv[0]) ret = cmd_off();
   else if (String(F("PULL")) == argv[0]) ret = cmd_pull();
 
-  else if (String(F("N")) == argv[0]) ret = cmd_n();
+  else if (String(F("N")) == argv[0]) ret = cmd_off();      // N is same to OFF
   else if (String(F("DOWN")) == argv[0]) ret = cmd_push();  // DOWN is same to PUSH
-  else if (String(F("UP")) == argv[0]) ret = cmd_pull();    // UP is same to PULL
+  else if (String(F("UP")) == argv[0]) ret = cmd_up();      // UP is similar to PULL
 
   else if (String(F("PUSH2X")) == argv[0]) ret = cmd_push2x();  // Like a alias
   else if (String(F("PUSH3X")) == argv[0]) ret = cmd_push3x();  // Like a alias
