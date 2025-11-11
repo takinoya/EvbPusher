@@ -1,0 +1,14 @@
+[Unit]
+Description=EVB-Pusher control hub service
+Requires=udev.service
+
+[Service]
+Type=simple
+ExecStart=/usr/local/sbin/evbpusher-srv --loglevel_debug
+ExecStop=/usr/bin/rm /tmp/evbpusher.sock
+Restart=on-abnormal
+User=root
+Group=dialout
+
+[Install]
+WantedBy=default.target

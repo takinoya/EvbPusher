@@ -1,0 +1,17 @@
+# How to get info
+# $ udevadm info -q all -n /dev/ttyUSBX
+
+### Arduino Nano Every ###
+SUBSYSTEM=="tty", ENV{ID_VENDOR_ID}=="2341", ENV{ID_MODEL_ID}=="0058",\
+ENV{ID_SERIAL_SHORT}=="88DC0E6451544B5932202020FF0D4318",\
+SYMLINK+="ttyEvbPusher",MODE="0666"
+
+### Arduino Nano (FTDI FT232RL) ###
+SUBSYSTEM=="tty", ENV{ID_VENDOR_ID}=="0403", ENV{ID_MODEL_ID}=="6001",\
+ENV{ID_SERIAL_SHORT}=="xxxx",\
+SYMLINK+="ttyEvbPusher",MODE="0666"
+
+### Arduino Nano R4 ###
+SUBSYSTEM=="tty", ENV{ID_VENDOR_ID}=="2341", ENV{ID_MODEL_ID}=="0074",\
+ENV{ID_SERIAL_SHORT}=="xxxx",\
+SYMLINK+="ttyEvbPusher",MODE="0666"

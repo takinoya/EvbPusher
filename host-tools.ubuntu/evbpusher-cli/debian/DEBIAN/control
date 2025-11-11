@@ -1,0 +1,13 @@
+Package: evbpusher-cli
+Version: 0.1.x
+Architecture: amd64
+Maintainer: Sakae OTAKI <niagara.ta.ki.no@gmail.com>
+Depends: python3-serial (>= 3.0), python3 (>= 3.0)
+Section: utils
+Priority: optional
+Homepage: https://github.com/takinoya/EvbPusher/
+Description: CLI and backend service for EvbPusher
+ Arduino_Nano_Every get reset when open own tty.
+ And it seems that behavior can not disabled.
+ For workaround, this control Server/CLI system is built.
+
