@@ -6,7 +6,7 @@
 	(paper "A4")
 	(title_block
 		(title "SFX Breakout board （EvbPusher project)")
-		(date "2025-11-22")
+		(date "2026-02-26")
 		(rev "0.1.0")
 		(company "田中屋電脳部")
 	)
@@ -3262,12 +3262,6 @@
 		(uuid "76d46b68-c602-4ae0-9965-7e877fa786e6")
 	)
 	(junction
-		(at 105.41 161.29)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "78fe1b09-ed79-4b9c-889e-42772368709d")
-	)
-	(junction
 		(at 67.31 123.19)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -3376,6 +3370,10 @@
 	(no_connect
 		(at 152.4 46.99)
 		(uuid "a8b89b17-f99f-49f8-b2ef-a947f88cd15a")
+	)
+	(no_connect
+		(at 92.71 186.69)
+		(uuid "b61c3696-ecdb-4ddf-ba96-f02928821f22")
 	)
 	(no_connect
 		(at 80.01 176.53)
@@ -3630,16 +3628,6 @@
 			(type default)
 		)
 		(uuid "2821b3c2-0a7e-4be2-9081-73eebe77d585")
-	)
-	(wire
-		(pts
-			(xy 105.41 186.69) (xy 105.41 161.29)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "28dcc6f2-747f-44be-b517-090117962274")
 	)
 	(wire
 		(pts
@@ -4693,16 +4681,6 @@
 	)
 	(wire
 		(pts
-			(xy 92.71 186.69) (xy 105.41 186.69)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "e6c782b2-07c8-4693-95fa-c576289d5880")
-	)
-	(wire
-		(pts
 			(xy 96.52 163.83) (xy 96.52 168.91)
 		)
 		(stroke
@@ -4901,7 +4879,7 @@
 		)
 		(uuid "df6654aa-a0fb-435b-8ee0-72e36a4cb527")
 	)
-	(label "PS_ON"
+	(label "PS_ON#"
 		(at 189.23 41.91 180)
 		(effects
 			(font
@@ -4937,7 +4915,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "01_Local_FP:R_Axial_DIN0207_L6.3mm_D2.5mm_P15.24mm_Horizontal_TOSA"
 			(at 170.434 40.894 90)
 			(effects
 				(font
@@ -5073,7 +5051,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "01_Local_FP:Faston_PC250"
 			(at 59.69 102.87 0)
 			(effects
 				(font
@@ -5139,7 +5117,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "01_Local_FP:Faston_PC250"
 			(at 100.33 106.68 0)
 			(effects
 				(font
@@ -5204,7 +5182,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "01_Local_FP:R_Axial_DIN0207_L6.3mm_D2.5mm_P2.54mm_Vertical_TOSA"
 			(at 181.864 90.424 90)
 			(effects
 				(font
@@ -5339,7 +5317,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "01_Local_FP:Faston_PC250"
 			(at 100.33 119.38 0)
 			(effects
 				(font
@@ -5538,7 +5516,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "01_Local_FP:Faston_PC250"
 			(at 59.69 127 0)
 			(effects
 				(font
@@ -5603,7 +5581,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "01_Local_FP:SW_Push_2P2T_Toggle_PB-22E85L"
 			(at 147.32 39.37 0)
 			(effects
 				(font
@@ -5685,7 +5663,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "01_Local_FP:Faston_PC250"
 			(at 59.69 110.49 0)
 			(effects
 				(font
@@ -6086,7 +6064,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "01_Local_FP:Faston_PC250"
 			(at 59.69 106.68 0)
 			(effects
 				(font
@@ -6553,7 +6531,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "01_Local_FP:R_Axial_DIN0207_L6.3mm_D2.5mm_P2.54mm_Vertical_TOSA"
 			(at 205.994 110.236 90)
 			(effects
 				(font
@@ -6621,7 +6599,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "01_Local_FP:R_Axial_DIN0207_L6.3mm_D2.5mm_P2.54mm_Vertical_TOSA"
 			(at 219.964 51.054 90)
 			(effects
 				(font
@@ -6755,7 +6733,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "01_Local_FP:R_Axial_DIN0207_L6.3mm_D2.5mm_P2.54mm_Vertical_TOSA"
 			(at 219.964 61.214 90)
 			(effects
 				(font
@@ -6824,7 +6802,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "01_Local_FP:Faston_PC250"
 			(at 100.33 123.19 0)
 			(effects
 				(font
@@ -6865,7 +6843,8 @@
 	)
 	(symbol
 		(lib_id "Connector:Screw_Terminal_01x03")
-		(at 59.69 49.53 180)
+		(at 59.69 49.53 0)
+		(mirror y)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -6873,7 +6852,7 @@
 		(dnp no)
 		(uuid "7c26a6db-6a98-41d2-94d8-b3136a3d783a")
 		(property "Reference" "J3"
-			(at 59.436 42.418 0)
+			(at 59.436 56.642 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6881,14 +6860,14 @@
 			)
 		)
 		(property "Value" "TB111-2-3-U-1-1"
-			(at 50.8 44.45 0)
+			(at 50.8 54.61 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "01_Local_FP:TerminalBlock_Alphaplus_TB111-2-3-U-1-1_1x03_P5.08mm_Horizontal"
 			(at 59.69 49.53 0)
 			(effects
 				(font
@@ -7002,6 +6981,7 @@
 	(symbol
 		(lib_id "Connector:Screw_Terminal_01x03")
 		(at 100.33 49.53 0)
+		(mirror x)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -7009,7 +6989,7 @@
 		(dnp no)
 		(uuid "7d88ee12-7f9f-4e7e-bfcc-5180890bbc3c")
 		(property "Reference" "J1"
-			(at 99.06 41.402 0)
+			(at 99.06 57.658 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7018,7 +6998,7 @@
 			)
 		)
 		(property "Value" "TB111-2-3-U-1-1"
-			(at 99.314 43.688 0)
+			(at 99.314 55.372 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7026,7 +7006,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "01_Local_FP:TerminalBlock_Alphaplus_TB111-2-3-U-1-1_1x03_P5.08mm_Horizontal"
 			(at 100.33 49.53 0)
 			(effects
 				(font
@@ -7229,7 +7209,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "01_Local_FP:R_Axial_DIN0207_L6.3mm_D2.5mm_P2.54mm_Vertical_TOSA"
 			(at 219.964 71.374 90)
 			(effects
 				(font
@@ -7540,6 +7520,7 @@
 	(symbol
 		(lib_id "Connector:Screw_Terminal_01x03")
 		(at 100.33 66.04 0)
+		(mirror x)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -7547,7 +7528,7 @@
 		(dnp no)
 		(uuid "8f64ed66-7d2f-4e73-91a3-2036879ebcdf")
 		(property "Reference" "J2"
-			(at 99.06 58.166 0)
+			(at 99.06 73.914 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7556,7 +7537,7 @@
 			)
 		)
 		(property "Value" "TB111-2-3-U-1-1"
-			(at 99.568 60.198 0)
+			(at 99.568 71.882 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7564,7 +7545,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "01_Local_FP:TerminalBlock_Alphaplus_TB111-2-3-U-1-1_1x03_P5.08mm_Horizontal"
 			(at 100.33 66.04 0)
 			(effects
 				(font
@@ -7979,7 +7960,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "01_Local_FP:R_Axial_DIN0207_L6.3mm_D2.5mm_P2.54mm_Vertical_TOSA"
 			(at 181.864 115.824 90)
 			(effects
 				(font
@@ -8047,7 +8028,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "01_Local_FP:R_Axial_DIN0207_L6.3mm_D2.5mm_P2.54mm_Vertical_TOSA"
 			(at 181.864 103.124 90)
 			(effects
 				(font
@@ -8258,7 +8239,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "01_Local_FP:R_Axial_DIN0207_L6.3mm_D2.5mm_P15.24mm_Horizontal_TOSA"
 			(at 147.574 90.424 90)
 			(effects
 				(font
@@ -8591,7 +8572,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "01_Local_FP:Faston_PC250"
 			(at 100.33 102.87 0)
 			(effects
 				(font
@@ -8792,7 +8773,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "01_Local_FP:R_Axial_DIN0207_L6.3mm_D2.5mm_P15.24mm_Horizontal_TOSA"
 			(at 188.214 155.194 90)
 			(effects
 				(font
@@ -8993,7 +8974,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "01_Local_FP:Faston_PC250"
 			(at 100.33 127 0)
 			(effects
 				(font
@@ -9176,7 +9157,8 @@
 	)
 	(symbol
 		(lib_id "Connector:Screw_Terminal_01x03")
-		(at 59.69 66.04 180)
+		(at 59.69 66.04 0)
+		(mirror y)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -9184,7 +9166,7 @@
 		(dnp no)
 		(uuid "edacb5c8-8154-4c54-859b-f4440c523a5f")
 		(property "Reference" "J4"
-			(at 59.436 58.674 0)
+			(at 59.436 73.406 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9192,7 +9174,7 @@
 			)
 		)
 		(property "Value" "TB111-2-3-U-1-1"
-			(at 60.706 60.96 0)
+			(at 60.706 71.12 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9200,7 +9182,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "01_Local_FP:TerminalBlock_Alphaplus_TB111-2-3-U-1-1_1x03_P5.08mm_Horizontal"
 			(at 59.69 66.04 0)
 			(effects
 				(font
@@ -9349,7 +9331,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "01_Local_FP:Faston_PC250"
 			(at 100.33 110.49 0)
 			(effects
 				(font
@@ -9416,7 +9398,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "01_Local_FP:Faston_PC250"
 			(at 59.69 119.38 0)
 			(effects
 				(font
@@ -9549,7 +9531,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "01_Local_FP:Faston_PC250"
 			(at 59.69 123.19 0)
 			(effects
 				(font

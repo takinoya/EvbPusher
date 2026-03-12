@@ -6,6 +6,7 @@
 ## Overview
 ### Concept
 - 千円以下で売っていたりもするが、Size・I/F仕様が好みではないので作る。
+    - 3A 流すにはパターンが細すぎる・・・
 - 土佐昌典VCによる一刀彫基板前提で素早く試作・実装する。
     - t=1.6mm
 - 余り部材の消費
@@ -59,7 +60,7 @@
 |Type-T|ターミナルブロック 3P 青 縦 小|4|Alphaplus::TB111-2-3-U-1-1|[秋月電子 101307](https://akizukidenshi.com/catalog/g/g101307/)|---|
 
 ### PCB build
-TBD
+TBU
 
 ### Circuit assemble
 TBD
@@ -136,10 +137,11 @@ TBD
 
 ### ToDo
 - Footprint
-    - [ ] Faston#250
-    - [ ] ターミナル青
-    - [ ] Switch
-    - [ ] 抵抗Horizontal長さ調整
-        - [ ] NORTH_PWR_OK : ```expr 4.2*7 + 2.54``` = 31.94
-        - [ ] NORTH_PS_ON  : ```expr 4.2*3 + 2.54``` = 15.14
+    - [Done] Faston#250
+    - [Done] ターミナル青
+    - [Done] Switch
+    - [Done] 抵抗Horizontal長さ調整
+        - [Skip] NORTH_PWR_OK : ```expr 4.2*7 + 2.54``` = 31.94
+            - 銅配線引き回しでカバーできそう
+        - [Skip] NORTH_PS_ON  : ```expr 4.2*3 + 2.54``` = 15.14
             - 15.24 でいいかも

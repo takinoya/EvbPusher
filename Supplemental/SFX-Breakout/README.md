@@ -1,7 +1,7 @@
-[English](README.md) | [日本語](README.ja.md)
+[English](README.md) | [Japanese](README.ja.md)
 ----
 
-# SFX Power Complex
+# SFX Breakout board
 
 TBD
-\(Original is here ==> [日本語](README.ja.md)\)
+\(Original is here ==> [Japanese](README.ja.md)\)

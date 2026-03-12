@@ -1,12 +1,14 @@
-(footprint "TerminalBlock_Phoenix_MKDS-1,5-3-5.08_1x03_P5.08mm_Horizontal"
+(footprint "TerminalBlock_Alphaplus_TB111-2-3-U-1-1_1x03_P5.08mm_Horizontal"
 	(version 20241229)
-	(generator "kicad-footprint-generator")
+	(generator "pcbnew")
+	(generator_version "9.0")
 	(layer "F.Cu")
-	(descr "Terminal Block Phoenix MKDS-1,5-3-5.08, 3 pins, pitch 5.08mm, size 15.2x9.8mm, drill diameter 1.3mm, pad diameter 2.6mm, http://www.farnell.com/datasheets/100425.pdf, script-generated using https://gitlab.com/kicad/libraries/kicad-footprint-generator/-/tree/master/scripts/TerminalBlock_Phoenix")
-	(tags "THT Terminal Block Phoenix MKDS-1,5-3-5.08 pitch 5.08mm size 15.2x9.8mm drill 1.3mm pad 2.6mm")
+	(descr "https://akizukidenshi.com/catalog/g/g101307/")
+	(tags "Terminal Block, 5.08 pitch, x3 pin, drill 1.3mm")
 	(property "Reference" "REF**"
 		(at 5.08 -6.32 0)
 		(layer "F.SilkS")
+		(uuid "53023c73-78b4-4819-990b-6ceebd86b0c6")
 		(effects
 			(font
 				(size 1 1)
@@ -14,94 +16,105 @@
 			)
 		)
 	)
-	(property "Value" "TerminalBlock_Phoenix_MKDS-1,5-3-5.08_1x03_P5.08mm_Horizontal"
+	(property "Value" "TerminalBlock_Alphaplus_TB111-2-3-U-1-1_1x03_P5.08mm_Horizontal"
 		(at 5.08 5.72 0)
 		(layer "F.Fab")
+		(uuid "2861fc67-3ff9-4224-abe9-8e468d48d619")
 		(effects
 			(font
 				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Datasheet" "https://akizukidenshi.com/goodsaffix/TB111-2-x-x-x-x.pdf"
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "d752079b-6a2b-4520-9607-639fe1dbee63")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Description" "https://akizukidenshi.com/catalog/g/g101307/"
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "d49f51d1-ed28-4040-bb91-be185e91a197")
+		(effects
+			(font
+				(size 1.27 1.27)
 				(thickness 0.15)
 			)
 		)
 	)
 	(attr through_hole)
 	(fp_line
-		(start -2.66 -5.32)
-		(end 12.82 -5.32)
+		(start -2.9 -4.1)
+		(end 13.1 -4.1)
 		(stroke
 			(width 0.12)
 			(type solid)
 		)
 		(layer "F.SilkS")
+		(uuid "6fbb17a9-3a58-48e1-8caa-875f2c971f6c")
 	)
 	(fp_line
-		(start -2.66 -2.3)
-		(end 12.82 -2.3)
+		(start -2.9 3.3)
+		(end -2.9 -4.1)
 		(stroke
 			(width 0.12)
 			(type solid)
 		)
 		(layer "F.SilkS")
+		(uuid "1dcb999f-1f59-4c2b-b87e-bb8c1d82ec25")
 	)
 	(fp_line
-		(start -2.66 2.6)
-		(end 12.82 2.6)
+		(start 13.1 -4.1)
+		(end 13.1 3.3)
 		(stroke
 			(width 0.12)
 			(type solid)
 		)
 		(layer "F.SilkS")
+		(uuid "c9b0004b-8ad2-4762-8c8d-e95da4dbf527")
 	)
 	(fp_line
-		(start -2.66 4.1)
-		(end 12.82 4.1)
+		(start 13.1 -2.1)
+		(end -2.9 -2.1)
 		(stroke
 			(width 0.12)
 			(type solid)
 		)
 		(layer "F.SilkS")
+		(uuid "2ad256ea-a92c-44cd-8f65-8ece1a4d1e5e")
 	)
 	(fp_line
-		(start -2.66 4.72)
-		(end -2.66 -5.32)
+		(start 13.1 2.3)
+		(end -2.9 2.3)
 		(stroke
 			(width 0.12)
 			(type solid)
 		)
 		(layer "F.SilkS")
+		(uuid "6ffd7ddf-6dd2-444d-a691-d0606a2b7c48")
 	)
 	(fp_line
-		(start -0.3 4.72)
-		(end -2.66 4.72)
+		(start 13.1 3.3)
+		(end -2.9 3.3)
 		(stroke
 			(width 0.12)
 			(type solid)
 		)
 		(layer "F.SilkS")
-	)
-	(fp_line
-		(start 12.82 -5.32)
-		(end 12.82 4.72)
-		(stroke
-			(width 0.12)
-			(type solid)
-		)
-		(layer "F.SilkS")
-	)
-	(fp_line
-		(start 12.82 4.72)
-		(end 0.3 4.72)
-		(stroke
-			(width 0.12)
-			(type solid)
-		)
-		(layer "F.SilkS")
+		(uuid "899f85a4-3d2c-400f-80b1-a6df8fd57a23")
 	)
 	(fp_poly
 		(pts
-			(xy 0 4.72)
-			(xy 0.44 5.33)
-			(xy -0.44 5.33)
+			(xy -2.2 2.5) (xy -1.76 3.11) (xy -2.64 3.11)
 		)
 		(stroke
 			(width 0.12)
@@ -109,96 +122,87 @@
 		)
 		(fill yes)
 		(layer "F.SilkS")
+		(uuid "a851078e-24ec-4d48-9f5e-3a4386b317fa")
 	)
 	(fp_line
-		(start -3.04 -5.71)
-		(end -3.04 5.1)
+		(start -3.04 -4.2)
+		(end -3.04 3.4)
 		(stroke
 			(width 0.05)
 			(type solid)
 		)
 		(layer "F.CrtYd")
+		(uuid "1e99ac68-22b6-4950-9822-1eb04f29ac6b")
 	)
 	(fp_line
-		(start -3.04 5.1)
-		(end 13.21 5.1)
+		(start -3.04 3.4)
+		(end 13.21 3.4)
 		(stroke
 			(width 0.05)
 			(type solid)
 		)
 		(layer "F.CrtYd")
+		(uuid "71591fe8-0a91-4719-976c-8d4ab251e99e")
 	)
 	(fp_line
-		(start 13.21 -5.71)
-		(end -3.04 -5.71)
+		(start 13.21 -4.2)
+		(end -3.03 -4.2)
 		(stroke
 			(width 0.05)
 			(type solid)
 		)
 		(layer "F.CrtYd")
+		(uuid "401f1b9e-3080-4de2-880b-bbe72b74110d")
 	)
 	(fp_line
-		(start 13.21 5.1)
-		(end 13.21 -5.71)
+		(start 13.21 3.4)
+		(end 13.21 -4.2)
 		(stroke
 			(width 0.05)
 			(type solid)
 		)
 		(layer "F.CrtYd")
+		(uuid "6f55ee46-7283-43cb-90f5-242a5f68e06b")
 	)
 	(fp_line
-		(start -2.54 -5.2)
-		(end 12.7 -5.2)
+		(start -2.9 -4.1)
+		(end 13.1 -4.1)
 		(stroke
 			(width 0.1)
 			(type solid)
 		)
 		(layer "F.Fab")
+		(uuid "6b13394b-fa53-4d7a-a39a-bc17321de0d3")
 	)
 	(fp_line
-		(start -2.54 -2.3)
-		(end 12.7 -2.3)
+		(start -2.9 2.1)
+		(end 13.1 2.1)
 		(stroke
 			(width 0.1)
 			(type solid)
 		)
 		(layer "F.Fab")
+		(uuid "735cc2c0-f0bd-4e3f-a782-e4d94692afc0")
 	)
 	(fp_line
-		(start -2.54 2.6)
-		(end 12.7 2.6)
+		(start -2.9 2.7)
+		(end -2.9 -4.1)
 		(stroke
 			(width 0.1)
 			(type solid)
 		)
 		(layer "F.Fab")
+		(uuid "4d4c3198-d88e-47a3-8486-7fa2ebb417f0")
 	)
 	(fp_line
-		(start -2.54 4.1)
-		(end -2.54 -5.2)
+		(start -2.35 3.25)
+		(end -2.85 2.75)
 		(stroke
 			(width 0.1)
 			(type solid)
 		)
 		(layer "F.Fab")
-	)
-	(fp_line
-		(start -2.54 4.1)
-		(end 12.7 4.1)
-		(stroke
-			(width 0.1)
-			(type solid)
-		)
-		(layer "F.Fab")
-	)
-	(fp_line
-		(start -2.04 4.6)
-		(end -2.54 4.1)
-		(stroke
-			(width 0.1)
-			(type solid)
-		)
-		(layer "F.Fab")
+		(uuid "e4461647-f151-4da3-9d8e-229323053dbd")
 	)
 	(fp_line
 		(start 0.955 -1.138)
@@ -208,6 +212,7 @@
 			(type solid)
 		)
 		(layer "F.Fab")
+		(uuid "f75d266b-cf24-47a3-a952-988f5ebd6395")
 	)
 	(fp_line
 		(start 1.138 -0.955)
@@ -217,6 +222,7 @@
 			(type solid)
 		)
 		(layer "F.Fab")
+		(uuid "b73dad9c-d217-4593-bd69-a169d2f29505")
 	)
 	(fp_line
 		(start 6.035 -1.138)
@@ -226,6 +232,7 @@
 			(type solid)
 		)
 		(layer "F.Fab")
+		(uuid "8ca1eac5-4a8e-464d-a85c-7d8df9ab36dc")
 	)
 	(fp_line
 		(start 6.218 -0.955)
@@ -235,6 +242,7 @@
 			(type solid)
 		)
 		(layer "F.Fab")
+		(uuid "533a1609-cd8e-4a42-9799-2d294f5d7109")
 	)
 	(fp_line
 		(start 11.115 -1.138)
@@ -244,6 +252,7 @@
 			(type solid)
 		)
 		(layer "F.Fab")
+		(uuid "6c56bb1a-e39e-4f22-bde7-d9b9c8849075")
 	)
 	(fp_line
 		(start 11.298 -0.955)
@@ -253,24 +262,27 @@
 			(type solid)
 		)
 		(layer "F.Fab")
+		(uuid "23cc6407-2fc3-45e3-b60b-a1e244905fca")
 	)
 	(fp_line
-		(start 12.7 -5.2)
-		(end 12.7 4.6)
+		(start 13.1 -4.1)
+		(end 13.1 3.3)
 		(stroke
 			(width 0.1)
 			(type solid)
 		)
 		(layer "F.Fab")
+		(uuid "6f9fa1e4-2a08-483b-a23c-9d37b1379161")
 	)
 	(fp_line
-		(start 12.7 4.6)
-		(end -2.04 4.6)
+		(start 13.1 3.3)
+		(end -2.3 3.3)
 		(stroke
 			(width 0.1)
 			(type solid)
 		)
 		(layer "F.Fab")
+		(uuid "a0b95508-6d75-4c64-9d37-d848dd3937ea")
 	)
 	(fp_circle
 		(center 0 0)
@@ -281,6 +293,7 @@
 		)
 		(fill no)
 		(layer "F.Fab")
+		(uuid "8633fc7c-2ce5-4c12-af79-dcabb383e965")
 	)
 	(fp_circle
 		(center 5.08 0)
@@ -291,6 +304,7 @@
 		)
 		(fill no)
 		(layer "F.Fab")
+		(uuid "3cc9840b-a64b-4b2c-a6db-265d3e071363")
 	)
 	(fp_circle
 		(center 10.16 0)
@@ -301,10 +315,12 @@
 		)
 		(fill no)
 		(layer "F.Fab")
+		(uuid "38541e02-026e-42c2-abec-0f48604af2f0")
 	)
 	(fp_text user "${REFERENCE}"
 		(at 5.08 3.2 0)
 		(layer "F.Fab")
+		(uuid "3d719898-5b69-41e1-bec6-2b0564d88a4f")
 		(effects
 			(font
 				(size 1 1)
@@ -319,6 +335,7 @@
 		(layers "*.Cu" "*.Mask")
 		(remove_unused_layers no)
 		(roundrect_rratio 0.096154)
+		(uuid "b0215752-e2da-42d3-ab2b-8cb21d4c33ae")
 	)
 	(pad "2" thru_hole circle
 		(at 5.08 0)
@@ -326,6 +343,7 @@
 		(drill 1.3)
 		(layers "*.Cu" "*.Mask")
 		(remove_unused_layers no)
+		(uuid "e35695a7-61cd-4bf4-96af-1008dc25f8ef")
 	)
 	(pad "3" thru_hole circle
 		(at 10.16 0)
@@ -333,17 +351,7 @@
 		(drill 1.3)
 		(layers "*.Cu" "*.Mask")
 		(remove_unused_layers no)
+		(uuid "ac193053-fe83-4803-a673-18169f5ac60a")
 	)
 	(embedded_fonts no)
-	(model "${KICAD9_3DMODEL_DIR}/TerminalBlock_Phoenix.3dshapes/TerminalBlock_Phoenix_MKDS-1,5-3-5.08_1x03_P5.08mm_Horizontal.step"
-		(offset
-			(xyz 0 0 0)
-		)
-		(scale
-			(xyz 1 1 1)
-		)
-		(rotate
-			(xyz 0 0 0)
-		)
-	)
 )

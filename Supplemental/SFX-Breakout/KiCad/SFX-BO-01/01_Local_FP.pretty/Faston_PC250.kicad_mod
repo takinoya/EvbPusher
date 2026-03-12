@@ -1,12 +1,14 @@
-(footprint "PhoenixContact_SPT_5_1-V-7.5_1x01_P7.5mm_Vertical"
+(footprint "Faston_PC250"
 	(version 20241229)
-	(generator "kicad-footprint-generator")
+	(generator "pcbnew")
+	(generator_version "9.0")
 	(layer "F.Cu")
-	(descr "Connector Phoenix Contact, SPT 5/1-V-7.5 Terminal Block, 1719309 (https://www.phoenixcontact.com/online/portal/gb/?uri=pxc-oc-itemdetail:pid=1719309), generated with kicad-footprint-generator")
-	(tags "Connector Phoenix Contact SPT 5/1-V-7.5 1719309")
+	(descr "https://akizukidenshi.com/catalog/g/g105119/")
+	(tags "Connector faston 250")
 	(property "Reference" "REF**"
 		(at -1.9 -3.78 0)
 		(layer "F.SilkS")
+		(uuid "6fc1c08b-0c2f-4cab-bac4-6b781b22415f")
 		(effects
 			(font
 				(size 1 1)
@@ -14,228 +16,146 @@
 			)
 		)
 	)
-	(property "Value" "PhoenixContact_SPT_5_1-V-7.5_1x01_P7.5mm_Vertical"
-		(at -1.9 17.32 0)
+	(property "Value" "PC250"
+		(at 0 7.7 0)
 		(layer "F.Fab")
+		(uuid "b4f87566-cdde-4915-9f10-184c97a5d515")
 		(effects
 			(font
 				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Datasheet" "https://akizukidenshi.com/goodsaffix/PC250.pdf"
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "83be46d6-2729-4bfb-8aa4-b2662553a24f")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Description" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "4b695b94-5a52-4d4d-913b-69cc78b4487b")
+		(effects
+			(font
+				(size 1.27 1.27)
 				(thickness 0.15)
 			)
 		)
 	)
 	(attr through_hole)
 	(fp_line
-		(start -6.66 -2.69)
-		(end 2.86 -2.69)
+		(start -0.5 1.65)
+		(end -0.5 3.35)
 		(stroke
 			(width 0.12)
 			(type solid)
 		)
 		(layer "F.SilkS")
+		(uuid "51659290-eeac-4479-9639-dc5e598022f5")
 	)
 	(fp_line
-		(start -6.66 16.03)
-		(end -6.66 -2.69)
+		(start 0.5 1.65)
+		(end 0.5 3.35)
 		(stroke
 			(width 0.12)
 			(type solid)
 		)
 		(layer "F.SilkS")
+		(uuid "201064a7-ce7a-4b78-aaee-5e62a748f8bd")
 	)
 	(fp_line
-		(start -6.66 16.03)
-		(end -1.6 16.03)
-		(stroke
-			(width 0.12)
-			(type solid)
-		)
-		(layer "F.SilkS")
-	)
-	(fp_line
-		(start -5.8 7.75)
-		(end -5.8 9.25)
-		(stroke
-			(width 0.12)
-			(type solid)
-		)
-		(layer "F.SilkS")
-	)
-	(fp_line
-		(start -5.8 9.25)
-		(end 0.2 9.25)
-		(stroke
-			(width 0.12)
-			(type solid)
-		)
-		(layer "F.SilkS")
-	)
-	(fp_line
-		(start -0.3 -3.49)
-		(end 0 -2.89)
-		(stroke
-			(width 0.12)
-			(type solid)
-		)
-		(layer "F.SilkS")
-	)
-	(fp_line
-		(start -0.3 -3.49)
-		(end 0.3 -3.49)
-		(stroke
-			(width 0.12)
-			(type solid)
-		)
-		(layer "F.SilkS")
-	)
-	(fp_line
-		(start 0.2 7.75)
-		(end -5.8 7.75)
-		(stroke
-			(width 0.12)
-			(type solid)
-		)
-		(layer "F.SilkS")
-	)
-	(fp_line
-		(start 0.2 9.25)
-		(end 0.2 7.75)
-		(stroke
-			(width 0.12)
-			(type solid)
-		)
-		(layer "F.SilkS")
-	)
-	(fp_line
-		(start 0.3 -3.49)
-		(end 0 -2.89)
-		(stroke
-			(width 0.12)
-			(type solid)
-		)
-		(layer "F.SilkS")
-	)
-	(fp_line
-		(start 1.6 16.03)
-		(end 2.86 16.03)
-		(stroke
-			(width 0.12)
-			(type solid)
-		)
-		(layer "F.SilkS")
-	)
-	(fp_line
-		(start 2.86 -2.69)
-		(end 2.86 16.03)
-		(stroke
-			(width 0.12)
-			(type solid)
-		)
-		(layer "F.SilkS")
-	)
-	(fp_arc
-		(start -4.92132 10.87868)
-		(mid -2.8 10)
-		(end -0.67868 10.87868)
-		(stroke
-			(width 0.12)
-			(type solid)
-		)
-		(layer "F.SilkS")
-	)
-	(fp_line
-		(start -7.05 -3.08)
-		(end -7.05 16.42)
+		(start -0.5 -1.7)
+		(end -0.5 6.7)
 		(stroke
 			(width 0.05)
 			(type solid)
 		)
 		(layer "F.CrtYd")
+		(uuid "0a30f1ae-5448-4540-aab8-5de59e533f28")
 	)
 	(fp_line
-		(start -7.05 16.42)
-		(end 3.25 16.42)
+		(start -0.496283 6.7)
+		(end 0.496283 6.7)
 		(stroke
 			(width 0.05)
 			(type solid)
 		)
 		(layer "F.CrtYd")
+		(uuid "52d71cc3-3b0d-44db-8bb7-754ea5837297")
 	)
 	(fp_line
-		(start 3.25 -3.08)
-		(end -7.05 -3.08)
+		(start 0.5 -1.7)
+		(end -0.5 -1.7)
 		(stroke
 			(width 0.05)
 			(type solid)
 		)
 		(layer "F.CrtYd")
+		(uuid "acaa3ada-8ce2-470f-89ff-875124252697")
 	)
 	(fp_line
-		(start 3.25 16.42)
-		(end 3.25 -3.08)
+		(start 0.5 6.7)
+		(end 0.5 -1.7)
 		(stroke
 			(width 0.05)
 			(type solid)
 		)
 		(layer "F.CrtYd")
+		(uuid "6436dffc-6d4a-46f5-8c5b-7a5077f7ec16")
 	)
 	(fp_line
-		(start -6.55 -2.58)
-		(end -6.55 15.92)
+		(start -0.4 6.6)
+		(end -0.4 -1.6)
 		(stroke
 			(width 0.1)
 			(type solid)
 		)
 		(layer "F.Fab")
+		(uuid "1899a127-c268-4fb3-bab2-a754ef8d76fb")
 	)
 	(fp_line
-		(start -6.55 15.92)
-		(end 2.75 15.92)
+		(start -0.4 6.6)
+		(end 0.4 6.6)
 		(stroke
 			(width 0.1)
 			(type solid)
 		)
 		(layer "F.Fab")
+		(uuid "1944c7cd-1534-4f27-ad58-6c7eb9dc86c8")
 	)
 	(fp_line
-		(start -0.95 -2.58)
-		(end 0 -1.08)
+		(start 0.4 -1.6)
+		(end -0.4 -1.6)
 		(stroke
 			(width 0.1)
 			(type solid)
 		)
 		(layer "F.Fab")
+		(uuid "3e113c3b-ab0b-4ac4-97d0-239b6e5558cc")
 	)
 	(fp_line
-		(start 0.95 -2.58)
-		(end 0 -1.08)
+		(start 0.4 6.6)
+		(end 0.4 -1.6)
 		(stroke
 			(width 0.1)
 			(type solid)
 		)
 		(layer "F.Fab")
-	)
-	(fp_line
-		(start 2.75 -2.58)
-		(end -6.55 -2.58)
-		(stroke
-			(width 0.1)
-			(type solid)
-		)
-		(layer "F.Fab")
-	)
-	(fp_line
-		(start 2.75 15.92)
-		(end 2.75 -2.58)
-		(stroke
-			(width 0.1)
-			(type solid)
-		)
-		(layer "F.Fab")
+		(uuid "6f450637-09b5-4e2b-91f4-3b498103a9c5")
 	)
 	(fp_text user "${REFERENCE}"
 		(at -1.9 -1.88 0)
 		(layer "F.Fab")
+		(uuid "8b4703fa-f8ed-4213-b9b7-806690d2af91")
 		(effects
 			(font
 				(size 1 1)
@@ -243,32 +163,21 @@
 			)
 		)
 	)
-	(pad "1" thru_hole roundrect
-		(at 0 0)
-		(size 2.8 4.3)
-		(drill 2.1)
+	(pad "1" thru_hole circle
+		(at 0 0 90)
+		(size 3.2 3.2)
+		(drill 1.4)
 		(layers "*.Cu" "*.Mask")
 		(remove_unused_layers no)
-		(roundrect_rratio 0.089286)
+		(uuid "2e956763-2c4a-4d29-b3c4-cbdbcc9eb4b9")
 	)
-	(pad "1" thru_hole roundrect
-		(at 0 14)
-		(size 2.8 4.3)
-		(drill 2.1)
+	(pad "1" thru_hole circle
+		(at 0 5 90)
+		(size 3.2 3.2)
+		(drill 1.4)
 		(layers "*.Cu" "*.Mask")
 		(remove_unused_layers no)
-		(roundrect_rratio 0.089286)
+		(uuid "4bef4761-a8fb-45a9-9549-6931938f0b48")
 	)
 	(embedded_fonts no)
-	(model "${KICAD9_3DMODEL_DIR}/Connector_Phoenix_SPT.3dshapes/PhoenixContact_SPT_5_1-V-7.5_1x01_P7.5mm_Vertical.step"
-		(offset
-			(xyz 0 0 0)
-		)
-		(scale
-			(xyz 1 1 1)
-		)
-		(rotate
-			(xyz 0 0 0)
-		)
-	)
 )
