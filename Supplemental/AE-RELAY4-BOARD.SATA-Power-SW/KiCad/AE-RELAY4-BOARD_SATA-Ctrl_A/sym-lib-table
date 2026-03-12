@@ -1,0 +1,4 @@
+(sym_lib_table
+  (version 7)
+  (lib (name "Xiao")(type "KiCad")(uri "C:/work.o-taki/MiniITX-Box/300x200x150_SUS-20/EvbPusher-Custom/KiCad/MB-95x27.Xiao-RP2040/Seeed_Studio_XIAO_Series.kicad_sym")(options "")(descr ""))
+)

@@ -1,0 +1,23 @@
+G04 #@! TF.GenerationSoftware,KiCad,Pcbnew,9.0.7*
+G04 #@! TF.CreationDate,2026-03-02T11:57:28+09:00*
+G04 #@! TF.ProjectId,AE-RELAY4-BOARD_SATA-Ctrl_A,41452d52-454c-4415-9934-2d424f415244,0.1.0*
+G04 #@! TF.SameCoordinates,PX5f5e100PY7bfa480*
+G04 #@! TF.FileFunction,Profile,NP*
+%FSLAX46Y46*%
+G04 Gerber Fmt 4.6, Leading zero omitted, Abs format (unit mm)*
+G04 Created by KiCad (PCBNEW 9.0.7) date 2026-03-02 11:57:28*
+%MOMM*%
+%LPD*%
+G01*
+G04 APERTURE LIST*
+G04 #@! TA.AperFunction,Profile*
+%ADD10C,0.050000*%
+G04 #@! TD*
+G04 APERTURE END LIST*
+D10*
+X0Y50000000D02*
+X97000000Y50000000D01*
+X97000000Y0D01*
+X0Y0D01*
+X0Y50000000D01*
+M02*
