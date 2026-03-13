@@ -1,0 +1,12 @@
+# FreeCAD
+*.FCBak
+
+# JwCAD
+*.jw$
+*.BAK
+
+# Temp dir
+tmp/
+
+# Work dir for 3D print slicer
+Shell/Slicer.work/
